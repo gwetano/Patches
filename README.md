@@ -9,7 +9,7 @@
 - Copia immediata degli snippet negli appunti
 - Interfaccia utente minimalista e intuitiva
 
-## Installazione per gli Sviluppatori
+## Installazione
 Se desideri contribuire allo sviluppo o personalizzare l'applicazione, segui questi passaggi:
 
 ### Requisiti
@@ -19,14 +19,16 @@ Assicurati di avere installati i seguenti strumenti:
 - [Electron](https://www.electronjs.org/)
 
 ### Procedura di installazione
+Dato che i file di setup non sono disponibili, per utilizzare Patches è necessario scaricare il progetto e avviarlo manualmente.
 1. Clona il repository:
    ```bash
    git clone https://github.com/gwetano/Patches.git
    cd Patches
    ```
-2. Installa le dipendenze necessarie:
+2. Installa le dipendenze necessarie e crea un progetto Electron:
    ```bash
    npm install
+   npx electron .
    ```
 3. Avvia l'applicazione in modalità sviluppo:
    ```bash
@@ -36,13 +38,8 @@ Assicurati di avere installati i seguenti strumenti:
    ```bash
    npm run build
    ```
-
-## Download e Installazione
-Se desideri semplicemente utilizzare l'applicazione senza compilare il codice, segui questi passaggi:
-
-1. Scarica il **file di setup** più recente dalla sezione **dist** del repository GitHub.
-2. Avvia il file di installazione (`.exe` per Windows) e segui le istruzioni a schermo.
-3. Una volta completata l'installazione, puoi avviare **Patches** dal menu Start o dalla directory di installazione.
+   Il pacchetto eseguibile sarà generato nella directory `/dist`, per runnarlo `/dist/win-unpacked/Patches.exe`, per condividerlo `/dist/Patches Setup VERSION.exe`.  
+   Patches è stato sviluppato con Visual Studio Code, è per questo motivo presente il file di configurazione in `.vscode/`.
 
 ## Panoramica del Funzionamento
 All'avvio dell'applicazione, troverai tre snippet di codice predefiniti, che possono essere liberamente eliminati per personalizzare il tuo archivio. Puoi aggiungere nuovi snippet cliccando sul pulsante di aggiunta, specificando un titolo, il linguaggio di programmazione e il contenuto del codice. Gli snippet salvati possono essere facilmente ricercati tramite la barra di ricerca e copiati negli appunti con un semplice clic.
@@ -52,4 +49,6 @@ Se desideri contribuire al progetto, puoi aprire una **pull request** o segnalar
 
 ## Licenza
 Questo progetto è rilasciato sotto licenza **MIT**.
+
+© 2025 Gwetano - Patches
 

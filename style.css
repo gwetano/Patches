@@ -90,6 +90,23 @@ footer .button {
   cursor: pointer;
 }
 
+footer button{
+  background-color: #ff0000;
+}
+
+footer button:hover {
+  background-color: #890000;
+}
+
+footer p{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  font-size: 15px;
+  letter-spacing: -0.8px;
+}
+
 #snippetsList {
   margin-top: 70px;
   display: grid;
@@ -186,12 +203,4 @@ button {
 
 button:hover {
   background-color: #0056b3;
-}
-
-footer button {
-  background-color: #ff0000;
-}
-
-footer button:hover {
-  background-color: #890000;
 }
