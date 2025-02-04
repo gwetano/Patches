@@ -1,0 +1,27 @@
+{
+  "name": "patches",
+  "version": "1.0.3",
+  "description": "Libreria personale per snippet di codice",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Gaetano",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^34.0.2",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.gaetano.patches",
+    "productName": "Patches",
+    "win": {
+      "icon": "build/logo.ico"
+    },
+    "mac": {
+      "icon": "build/logo.icns" 
+    }
+  }
+}

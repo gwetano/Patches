@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Lettura file di testo",
+    "language": "Python",
+    "code": "def read_file(path):\n    with open(path, 'r', encoding='utf-8') as file:\n        return file.read()\n\nprint(read_file(\"example.txt\"))\n"
+  },
+  {
+    "title": "Librerie utili",
+    "language": "C",
+    "code": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;string.h&gt;\n#include &lt;math.h&gt;\n#include &lt;stdbool.h&gt; "
+  },
+  {
+    "title": "Button carino",
+    "language": "css",
+    "code": "button {\n  background-color: #007bff;\n  color: white;\n  padding: 10px 15px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n}\n"
+  }
+]

@@ -1,0 +1,11 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.gaetano.patches
+productName: Patches
+win:
+  icon: build/logo.ico
+mac:
+  icon: build/logo.icns
+files: []
+electronVersion: 34.0.2
