@@ -54,7 +54,7 @@ Per installare Patches su Windows occorre eseguire:
    ```bash
    ./install.bat
    ```
-Una volta eseguito l'istaller la cartella `/dist` conterrà il pacchetto di installazione finale.
+Una volta eseguito l'installer la cartella `/dist` conterrà il pacchetto di installazione finale.
 
 L'installer genera una cartella in `$HOME/Documents` chiamata Patches con tutte le risorse locali di cui ha bisogno.
 
