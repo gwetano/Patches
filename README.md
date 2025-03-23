@@ -18,8 +18,10 @@ Assicurati di avere installati i seguenti strumenti:
 - [Git](https://git-scm.com/)
 - [Electron](https://www.electronjs.org/)
 
-### Procedura di installazione
+### Dipendenze
+
 Dato che i file di setup non sono disponibili, per utilizzare Patches è necessario scaricare il progetto e avviarlo manualmente.
+
 1. Clona il repository:
    ```bash
    git clone https://github.com/gwetano/Patches.git
@@ -30,19 +32,39 @@ Dato che i file di setup non sono disponibili, per utilizzare Patches è necessa
    npm install
    npx electron .
    ```
-3. Avvia l'applicazione in modalità sviluppo:
-   ```bash
-   npm start
-   ```
-4. Per generare un pacchetto eseguibile:
+3. Per generare un pacchetto eseguibile:
    ```bash
    npm run build
    ```
-   Il pacchetto eseguibile sarà generato nella directory `/dist`, per runnarlo `/dist/win-unpacked/Patches.exe`, per condividerlo `/dist/Patches Setup VERSION.exe`.  
-   Patches è stato sviluppato con Visual Studio Code, è per questo motivo presente il file di configurazione in `.vscode/`.
+Il pacchetto eseguibile sarà generato nella directory `/dist`, per runnarlo `/dist/win-unpacked/Patches.exe`, per condividerlo `/dist/Patches Setup VERSION.exe`. Patches è stato sviluppato con Visual Studio Code, è per questo motivo presente il file di configurazione in `.vscode/`.
+
+### installazione Linux
+
+Per installare Patches su Linux occorre eseguire:
+ 
+   ```bash
+   sh install.sh
+   ```
+
+
+### installazione Windows
+
+Per installare Patches su Windows occorre eseguire:
+ 
+   ```bash
+   ./install.bat
+   ```
+Una volta eseguito l'istaller la cartella `/dist` conterrà il pacchetto di installazione finale.
+
+L'installer genera una cartella in `$HOME/Documents` chiamata Patches con tutte le risorse locali di cui ha bisogno.
 
 ## Panoramica del Funzionamento
 All'avvio dell'applicazione, troverai tre snippet di codice predefiniti, che possono essere liberamente eliminati per personalizzare il tuo archivio. Puoi aggiungere nuovi snippet cliccando sul pulsante di aggiunta, specificando un titolo, il linguaggio di programmazione e il contenuto del codice. Gli snippet salvati possono essere facilmente ricercati tramite la barra di ricerca e copiati negli appunti con un semplice clic.
+
+## Sviluppi futuri
+
+* Language highlighting automatico
+* Definizione di librerie di code snippet per definire un accesso più agevole
 
 ## Contributi
 Se desideri contribuire al progetto, puoi aprire una **pull request** o segnalare problemi tramite la sezione **Issues** su GitHub.

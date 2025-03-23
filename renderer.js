@@ -1,5 +1,8 @@
 const { ipcRenderer } = require('electron');
 
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.endsWith('index.html')) {
     ipcRenderer.send('get-snippets');
@@ -16,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
           const snippetDiv = document.createElement('div');
           snippetDiv.className = 'snippet';
           snippetDiv.setAttribute('data-keywords', `${snippet.title} ${snippet.language} ${snippet.code}`.toLowerCase());
+
           snippetDiv.innerHTML = `
             <h3>${snippet.title} (${snippet.language})</h3>
             <pre class="code-snippet" title="Clicca per copiare"><code>${snippet.code}</code></pre>

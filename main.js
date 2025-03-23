@@ -2,7 +2,10 @@ const { app, BrowserWindow, Menu, ipcMain, clipboard } = require('electron');
 const path = require('path');
 const fs = require('fs');
 
-const snippetsFile = path.join(__dirname, 'snippet.json');
+//const snippetsFile = path.join(__dirname, 'snippet.json');
+const snippetsFile = path.join(process.env.HOME || process.env.USERPROFILE, 'Documents','Patches', 'snippet.json');
+const graphic = path.join(process.env.HOME || process.env.USERPROFILE, 'Documents','Patches');
+
 
 function escapeHTML(str) {
   return str.replace(/&/g, "&amp;")
@@ -17,7 +20,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 900,
     height: 700,
-    icon: path.join(__dirname, 'img', 'logo.png'),
+    icon: path.join(graphic, 'img', 'logo.png'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false 
