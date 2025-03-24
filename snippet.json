@@ -1,17 +1,17 @@
 [
   {
-    "title": "Lettura file di testo",
-    "language": "Python",
-    "code": "def read_file(path):\n    with open(path, 'r', encoding='utf-8') as file:\n        return file.read()\n\nprint(read_file(\"example.txt\"))\n"
+    "title": "Lettura file binario",
+    "language": "Java",
+    "code": "public static TreeSet&lt;TimbraturaDipendente&gt; leggiDaFile(String filename){\n        //TreeSet&lt;TimbraturaDipendente&gt; ts = new TreeSet&lt;&gt;();\n\n        try(DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream(filename)))) {\n            //Dipendente dip = new Dipendente(dis.readUTF(), dis.readUTF(), dis.readUTF());\n            while(true){\n                try {\n                    //ts.add(new TimbraturaDipendente(dip, dis.readInt(), dis.readInt(), dis.readInt(), dis.readInt(), dis.readInt(), dis.readInt()));\n                } catch(EOFException e) {\n                    break;\n                }\n            }\n        }catch (FileNotFoundException e) {\n            throw new RuntimeException(e);\n        } catch (IOException e) {\n            throw new RuntimeException(e);\n        }\n        //return ts;\n    }"
   },
   {
-    "title": "Librerie utili",
+    "title": "Scrittura File Binario",
+    "language": "Java",
+    "code": " public static void scriviSuFile(GestoreTimbrature gt, String filename) {\n       try (DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(filename)))) {\n                dos.writeUTF(gt.getGestore().get(s).first().getDipendente().getNome());\n                dos.writeUTF(gt.getGestore().get(s).first().getDipendente().getCognome());\n                dos.writeUTF(s);\n                for (TimbraturaDipendente td : gt.getGestore().get(s)) {\n                    dos.writeInt(td.getPresenza().getYear());\n                    dos.writeInt(td.getPresenza().getMonthValue());\n                    dos.writeInt(td.getPresenza().getDayOfMonth());\n                    dos.writeInt(td.getPresenza().getHour());\n                    dos.writeInt(td.getPresenza().getMinute());\n                    dos.writeInt(td.getPresenza().getSecond());\n                }\n            } catch (IOException e) {\n                System.out.println(e.getMessage());\n       }\n    }"
+  },
+  {
+    "title": "ciao",
     "language": "C",
-    "code": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;string.h&gt;\n#include &lt;math.h&gt;\n#include &lt;stdbool.h&gt; "
-  },
-  {
-    "title": "Button carino",
-    "language": "css",
-    "code": "button {\n  background-color: #007bff;\n  color: white;\n  padding: 10px 15px;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n}\n"
+    "code": "printf(&quot;ciao&quot;)"
   }
 ]

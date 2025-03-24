@@ -19,7 +19,6 @@ Assicurati di avere installati i seguenti strumenti:
 - [Electron](https://www.electronjs.org/)
 
 ### Dipendenze
-
 Dato che i file di setup non sono disponibili, per utilizzare Patches è necessario scaricare il progetto e avviarlo manualmente.
 
 1. Clona il repository:
@@ -32,29 +31,22 @@ Dato che i file di setup non sono disponibili, per utilizzare Patches è necessa
    npm install
    npx electron .
    ```
-3. Per generare un pacchetto eseguibile:
-   ```bash
-   npm run build
-   ```
-Il pacchetto eseguibile sarà generato nella directory `/dist`, per runnarlo `/dist/win-unpacked/Patches.exe`, per condividerlo `/dist/Patches Setup VERSION.exe`. Patches è stato sviluppato con Visual Studio Code, è per questo motivo presente il file di configurazione in `.vscode/`.
 
 ### installazione Linux
-
 Per installare Patches su Linux occorre eseguire:
  
    ```bash
    sh install.sh
    ```
 
-
 ### installazione Windows
-
 Per installare Patches su Windows occorre eseguire:
  
    ```bash
    ./install.bat
    ```
-Una volta eseguito l'installer la cartella `/dist` conterrà il pacchetto di installazione finale.
+Una volta eseguito l'installer la cartella `/dist` conterrà il pacchetto di installazione finale, per runnarlo `/dist/win-unpacked/Patches.exe`, per condividerlo `/dist/Patches Setup VERSION.exe`.  
+Patches è stato sviluppato con Visual Studio Code, è per questo motivo presente il file di configurazione in `.vscode/`.
 
 L'installer genera una cartella in `$HOME/Documents` chiamata Patches con tutte le risorse locali di cui ha bisogno.
 
@@ -72,5 +64,5 @@ Se desideri contribuire al progetto, puoi aprire una **pull request** o segnalar
 ## Licenza
 Questo progetto è rilasciato sotto licenza **MIT**.
 
-© 2025 Gwetano - Patches
+© 2025 - Patches
 
